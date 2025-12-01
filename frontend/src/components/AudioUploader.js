@@ -58,14 +58,18 @@ export default function AudioUploader() {
 
         <div className="upload-section">
           <label htmlFor="audio-file" className="upload-label">
-            <div className="upload-icon">🎵</div>
+            <div className="upload-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                <path d="M9 18V5l12-2v13M9 18c0 1.657-1.343 3-3 3s-3-1.343-3-3 1.343-3 3-3 3 1.343 3 3zm12-2c0 1.657-1.343 3-3 3s-3-1.343-3-3 1.343-3 3-3 3 1.343 3 3zM9 9l12-2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </div>
             <p className="upload-text">
               {loading ? "Procesando..." : "Seleccionar Archivo de Audio"}
             </p>
             <p className="upload-hint">Formato soportado: WAV</p>
             {fileName && !loading && (
               <div className="file-selected">
-                Archivo seleccionado: {fileName}
+                {fileName}
               </div>
             )}
             {loading && (
